@@ -14,12 +14,12 @@ A React.js application that calculates **customer reward points** based on trans
 
 ## 🛠️ Installation & Setup
 
-### **1️⃣ Clone the Repository**
+### ** Clone the Repository**
 ```sh
 git clone https://github.com/yourusername/rewards-calculator.git
 cd rewards-calculator
 ```
-FOLDER STRUCTURE
+### **FOLDER STRUCTURE**
 rewards-calculator/
 │── src/
 │   ├── api/

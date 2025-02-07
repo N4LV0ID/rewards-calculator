@@ -20,11 +20,9 @@ const App = () => {
                 const month = new Date(date).toLocaleString("default", { month: "long" });
                 const points = calculatePoints(amount);
 
-                // Store Transactions
                 if (!initialTransactions[month]) initialTransactions[month] = [];
                 initialTransactions[month].push({ customer, amount, points });
 
-                // Store Monthly Totals
                 if (!initialTotals[month]) initialTotals[month] = {};
                 if (!initialTotals[month][customer]) initialTotals[month][customer] = { totalSpent: 0, totalPoints: 0 };
 
@@ -46,7 +44,6 @@ const App = () => {
 
         const points = calculatePoints(amount);
 
-        // Update Transactions using functional updates to avoid duplicate rendering
         setTransactions((prev) => ({
             ...prev,
             [selectedMonth]: [
@@ -55,7 +52,6 @@ const App = () => {
             ],
         }));
 
-        // Update Monthly Totals using functional updates
         setTotals((prev) => ({
             ...prev,
             [selectedMonth]: {
@@ -87,8 +83,6 @@ const App = () => {
     return (
         <div style={{ padding: "20px" }}>
             <h1>Rewards Program</h1>
-
-            {/* User Input */}
             <div style={{ marginBottom: "20px" }}>
                 <h2>Add Transaction</h2>
                 <label>Customer:</label>
@@ -107,8 +101,6 @@ const App = () => {
 
                 <button onClick={handleAddTransaction} style={{ padding: "5px 10px", cursor: "pointer" }}>Add Transaction</button>
             </div>
-
-            {/* Display Transactions in a Table */}
             <h2>Transaction History</h2>
             {Object.keys(transactions).map((month) => (
                 <div key={month} style={{ marginBottom: "20px" }}>
@@ -133,8 +125,6 @@ const App = () => {
                     </table>
                 </div>
             ))}
-
-            {/* Display Rewards per Month */}
             <h2>Monthly Reward Points & Expenditure</h2>
             <table border="1" cellPadding="10" style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
@@ -158,8 +148,6 @@ const App = () => {
                     )}
                 </tbody>
             </table>
-
-            {/* Display Total Aggregates */}
             <h2>Total for Three Months</h2>
             <table border="1" cellPadding="10" style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
