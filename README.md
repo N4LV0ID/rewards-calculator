@@ -19,19 +19,34 @@ A React.js application that calculates **customer reward points** based on trans
 git clone https://github.com/yourusername/rewards-calculator.git
 cd rewards-calculator
 ```
-### **FOLDER STRUCTURE**
-rewards-calculator/
-│── src/
-│   ├── api/
-│   │   ├── transactions.js   # Simulates an API call to fetch transactions
-│   ├── components/           # Reusable React components (if needed)
-│   ├── utils/
-│   │   ├── calculatePoints.js # Function to calculate reward points
-│   ├── App.js                # Main React Component
-│   ├── index.js              # Entry Point
-│── public/                    # Static Assets
-│── package.json               # Dependencies & Scripts
-│── README.md                  # Documentation (this file)
+# 📂 Project Folder Structure
+
+This project follows a clean and modular folder structure to ensure maintainability and scalability.
+
+
+## 📜 Folder Descriptions
+
+- **`public/`**: Contains static assets like `index.html` and icons.
+- **`src/`**: Main source folder where the app’s logic is built.
+  - **`api/`**: Contains `transactions.js`, which simulates fetching transaction data asynchronously.
+  - **`components/`**: Will contain reusable UI components if needed.
+  - **`utils/`**: Houses utility functions, including `calculatePoints.js` for computing reward points.
+  - **`App.js`**: The root React component where the application logic resides.
+  - **`index.js`**: The entry point of the React application.
+- **`package.json`**: Stores project dependencies and scripts.
+- **`README.md`**: Documentation file explaining the project and its setup.
+
+---
+
+## 🚀 Next Steps
+
+1. **Copy & Paste** this into your `README.md`.  
+2. **Push to GitHub** using:
+   ```sh
+   git add .
+   git commit -m "Added folder structure to README"
+   git push origin main
+
 
 ## Available Scripts
 
